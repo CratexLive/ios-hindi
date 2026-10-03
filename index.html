@@ -133,7 +133,7 @@
             <div class="player-section-wrap">
               <div class="video-card">
                 <div class="video-wrap">
-                  <iframe src="https://sony1-ios.pages.dev/" sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                  <iframe src="https://sony1-ios.pages.dev/" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
                 <div class="video-details">
                   <div class="video-meta-row">
@@ -244,42 +244,23 @@
             }, 50);
           };
 
-          this.shadow.getElementById('btn-cancel').getElementById = this.shadow.getElementById('btn-cancel');
-          if(this.shadow.getElementById('btn-cancel')) {
-            this.shadow.getElementById('btn-cancel').addEventListener('click', triggerSecondPopup);
-          }
-          if(this.shadow.getElementById('btn-join')) {
-            this.shadow.getElementById('btn-join').addEventListener('click', triggerSecondPopup);
-          }
+          this.shadow.getElementById('btn-cancel').addEventListener('click', triggerSecondPopup);
+          this.shadow.getElementById('btn-join').addEventListener('click', triggerSecondPopup);
 
-          if(this.shadow.getElementById('btn-close-2')) {
-            this.shadow.getElementById('btn-close-2').addEventListener('click', () => this.closePopup2());
-          }
-          if(this.shadow.getElementById('btn-join-2')) {
-            this.shadow.getElementById('btn-join-2').addEventListener('click', () => this.goTelegram());
-          }
+          this.shadow.getElementById('btn-close-2').addEventListener('click', () => this.closePopup2());
+          this.shadow.getElementById('btn-join-2').addEventListener('click', () => this.goTelegram());
 
-          if(this.shadow.getElementById('btn-unlock-tg')) {
-            this.shadow.getElementById('btn-unlock-tg').addEventListener('click', () => {
-              localStorage.setItem('cricxcrate_popup3_time', new Date().getTime().toString());
-              this.goTelegram();
-              const overlay3 = this.shadow.getElementById('overlay-3');
-              if (overlay3) overlay3.classList.remove('show');
-            });
-          }
+          this.shadow.getElementById('btn-unlock-tg').addEventListener('click', () => {
+            localStorage.setItem('cricxcrate_popup3_time', new Date().getTime().toString());
+            this.goTelegram();
+            const overlay3 = this.shadow.getElementById('overlay-3');
+            if (overlay3) overlay3.classList.remove('show');
+          });
 
-          if(this.shadow.getElementById('btn-banner-tg')) {
-            this.shadow.getElementById('btn-banner-tg').addEventListener('click', () => this.goTelegram());
-          }
-          if(this.shadow.getElementById('btn-req-tg')) {
-            this.shadow.getElementById('btn-req-tg').addEventListener('click', () => this.goTelegram());
-          }
-          if(this.shadow.getElementById('btn-float-tg')) {
-            this.shadow.getElementById('btn-float-tg').addEventListener('click', () => this.goTelegram());
-          }
-          if(this.shadow.getElementById('btn-share')) {
-            this.shadow.getElementById('btn-share').addEventListener('click', () => this.shareStream());
-          }
+          this.shadow.getElementById('btn-banner-tg').addEventListener('click', () => this.goTelegram());
+          this.shadow.getElementById('btn-req-tg').addEventListener('click', () => this.goTelegram());
+          this.shadow.getElementById('btn-float-tg').addEventListener('click', () => this.goTelegram());
+          this.shadow.getElementById('btn-share').addEventListener('click', () => this.shareStream());
         }
 
         closePopup1() { 
